@@ -1,5 +1,5 @@
 # ESPIMC
- ``` verion 3.1.1 ```
+ ``` verion 3.2.1 ```
 
 **Descriccion de el proyecto**
 recoje datos sobre el peso de una persona en libras con una bascula digital y los muestra en una pantalla TFT
