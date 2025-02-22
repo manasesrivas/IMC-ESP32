@@ -37,3 +37,8 @@ Diseño de la UI de la pantalla. Esta creada con la herramienta square line stud
 - se calibro la bascula para medir en kilogramos pero se transfomaran mediante una ecuacion a libras.
 - Las conecciones de la placa a la pantalla se hicieron soldadas. 
 - se agrego codigo externo de la documentacion de LVGL para agregar message box y un textarea.
+
+
+
+# pendientes
+- para el contenedor: conectedWifiConected, debe agregarse si el esp32 esta conectado a una red wifi. poner un nombre global para agregarlo y acceder de cual parte del programa.

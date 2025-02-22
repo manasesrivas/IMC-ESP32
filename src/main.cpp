@@ -1,9 +1,31 @@
 #include <Arduino.h>
+// #include <LittleFS.h>
+#include <WiFi.h>
 #include <HX711.h>
 #include <TFT_eSPI.h>
 #include <SPI.h>
 #include <lvgl.h>
 #include <ui.h>
+
+
+// String readFile(const char *ruta){
+//     Serial.printf("leer archivo en: %s\n", ruta);
+//     File archivo = LittleFS.open(ruta, "r");
+//     if(!archivo){
+//       Serial.println("archivo no se puede abrir");
+//       return;
+//     }
+//     Serial.print("contiene: ");
+//     String content = "";
+//     while(archivo.available()){
+//       Serial.write(archivo.read());
+//       content += (char)archivo.read();
+//     }
+//     Serial.println();
+//     archivo.close();
+//     return content;
+//   } 
+
 
 
 #define TFT_HOR_RES   320
@@ -75,15 +97,31 @@ void setup() {
     lv_indev_set_type(indev, LV_INDEV_TYPE_POINTER); /*Touchpad should have POINTER type*/
     lv_indev_set_read_cb(indev, my_touchpad_read);
 
-
-
-    // lv_obj_t *label = lv_label_create( lv_screen_active() );
-    // lv_label_set_text( label, "Hello Arduino, I'm LVGL!" );
-    // lv_obj_align( label, LV_ALIGN_CENTER, 0, 0 );
-
     ui_init();
 
-    Serial.println( "Setup done ñ" );
+    // if(LittleFS.begin()){
+    //     Serial.println("se inicio little fs\n\n\n");
+    // }
+    
+    
+    WiFi.mode(WIFI_STA);
+    WiFi.begin();  // Conectar a la red WiFi
+
+    // for(int8_t attempConected = 0; WiFi.status() != WL_CONNECTED; attempConected++){
+    //     if(WiFi.status() != WL_CONNECT_FAILED) Serial.println("coneccion fallida");
+    //     if(attempConected=3){
+    //         if(WiFi.status() != WL_CONNECT_FAILED){
+    //             Serial.println("coneccion fallida detron del IF");
+    //             break;
+    //         }
+    //         sleep(300);
+    //     };
+    //     Serial.println("intento: "+(String)attempConected);
+    //     _ui_screen_change(&ui_homeScreen, LV_SCR_LOAD_ANIM_OVER_TOP, 100, 0, &ui_homeScreen_screen_init);
+    //     _ui_screen_delete(&ui_splashScreen);
+    // }
+
+    
 }
 
 void loop()
