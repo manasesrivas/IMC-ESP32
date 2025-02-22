@@ -152,13 +152,13 @@ void ui_settingScreen_screen_init(void)
     section = lv_menu_section_create(wifi_page);
     list_SSID = lv_list_create(section);
     lv_obj_set_width(list_SSID, lv_pct(100));
-    // lv_list_add_text(list_SSID, "claro1234"); 
+    
     lv_obj_t * btn;
     btn = lv_list_add_button(list_SSID, LV_SYMBOL_WIFI, "claro1234");
     lv_obj_add_event_cb(btn, show_message_box, LV_EVENT_RELEASED, NULL);
     btn = lv_list_add_button(list_SSID, LV_SYMBOL_WIFI, "tigo232");
     lv_obj_add_event_cb(btn, show_message_box, LV_EVENT_RELEASED, NULL);
-    btn = lv_list_add_button(list_SSID, LV_SYMBOL_WIFI, "san mighel");
+    btn = lv_list_add_button(list_SSID, LV_SYMBOL_WIFI, "CLARO64398");
     lv_obj_add_event_cb(btn, show_message_box, LV_EVENT_RELEASED, NULL);
     btn = lv_list_add_button(list_SSID, LV_SYMBOL_WIFI, "iphone");
     lv_obj_add_event_cb(btn, show_message_box, LV_EVENT_RELEASED, NULL);

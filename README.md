@@ -28,8 +28,8 @@ Diseño de la UI de la pantalla. Esta creada con la herramienta square line stud
 <img src="./assets/splashScreen.JPG" height="500"/>
 <img src="./assets/homeScreen.JPG" height="500"/>
 <img src="./assets/settingsScreen.JPG" height="500"/>
-<img src="./assets/wifiSettingsScreen.JPG" height="500"/>
-<img src="./assets/signWifiScreen.JPG" height="500"/>
+<img src="./assets/wifiSettingScreen.JPG" height="500"/>
+<img src="./assets/passwordwifiScreen.JPG.JPG" height="500"/>
 
 
 # mejoras

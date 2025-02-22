@@ -86,6 +86,8 @@ void ui_event_splashScreen(lv_event_t * e)
     lv_event_code_t event_code = lv_event_get_code(e);
 
     if(event_code == LV_EVENT_SCREEN_LOADED) {
+        _ui_screen_change(&ui_homeScreen, LV_SCR_LOAD_ANIM_OVER_TOP, 100, 1000, &ui_homeScreen_screen_init);
+        _ui_screen_delete(&ui_splashScreen);
 
     }
 }

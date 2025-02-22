@@ -207,7 +207,7 @@ void ui_homeScreen_screen_init(void)
     lv_obj_set_width(ui_labelHeader, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_labelHeader, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_align(ui_labelHeader, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_labelHeader, "NORMAL");
+    lv_label_set_text(ui_labelHeader, "---");
     lv_obj_set_style_text_color(ui_labelHeader, lv_color_hex(0x18F510), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_labelHeader, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_labelHeader, &lv_font_montserrat_18, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -216,14 +216,14 @@ void ui_homeScreen_screen_init(void)
     lv_obj_set_width(ui_labelResultIMC, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_labelResultIMC, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_align(ui_labelResultIMC, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_labelResultIMC, "5.4");
+    lv_label_set_text(ui_labelResultIMC, "---");
     lv_obj_set_style_text_font(ui_labelResultIMC, &lv_font_montserrat_18, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_labelDescriptionIMC = lv_label_create(ui_containerResultIMC);
     lv_obj_set_width(ui_labelDescriptionIMC, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_labelDescriptionIMC, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_align(ui_labelDescriptionIMC, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_labelDescriptionIMC, "Estas MUY encima de lo optimo \npara tu peso y altura.");
+    lv_label_set_text(ui_labelDescriptionIMC, "----");
     lv_obj_set_style_text_align(ui_labelDescriptionIMC, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Button1 = lv_button_create(ui_homeScreen);
