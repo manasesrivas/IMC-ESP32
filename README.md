@@ -40,5 +40,5 @@ Diseño de la UI de la pantalla. Esta creada con la herramienta square line stud
 
 
 
-# pendientes
-- para el contenedor: conectedWifiConected, debe agregarse si el esp32 esta conectado a una red wifi. poner un nombre global para agregarlo y acceder de cual parte del programa.
+# problemas
+- no se puede agregar modulo wifi, por falta de memoria DRAM
