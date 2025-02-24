@@ -11,6 +11,7 @@ extern "C" {
 #endif
 
 #include "lvgl.h"
+
 #include "ui_helpers.h"
 #include "ui_events.h"
 
@@ -18,55 +19,37 @@ extern "C" {
 // SCREEN: ui_splashScreen
 void ui_splashScreen_screen_init(void);
 void ui_event_splashScreen(lv_event_t * e);
-extern lv_obj_t * ui_SpinnerSplash;
 extern lv_obj_t * ui_splashScreen;
 extern lv_obj_t * ui_Image2;
+extern lv_obj_t * ui_spinnerSplash;
+extern lv_obj_t * ui_derechosDeAutorLabel;
 // CUSTOM VARIABLES
 
 // SCREEN: ui_homeScreen
 void ui_homeScreen_screen_init(void);
 extern lv_obj_t * ui_homeScreen;
-extern lv_obj_t * ui_homeImg;
-extern lv_obj_t * ui_homeLabel;
 extern lv_obj_t * ui_internetUnavailableImg;
 extern lv_obj_t * ui_stateChargeBateryBar;
-void ui_event_buttonWeight(lv_event_t * e);
-extern lv_obj_t * ui_buttonWeight;
-extern lv_obj_t * ui_imgWeight;
-extern lv_obj_t * ui_labelWeight;
-void ui_event_buttonHeight(lv_event_t * e);
-extern lv_obj_t * ui_buttonHeight;
-extern lv_obj_t * ui_imgHeight;
-extern lv_obj_t * ui_labelHeight;
 extern lv_obj_t * ui_containerdkdkdd;
-extern lv_obj_t * ui_Roller1;
+extern lv_obj_t * ui_Dropdown3;
 extern lv_obj_t * ui_Label1;
 extern lv_obj_t * ui_containerRollerAge;
-extern lv_obj_t * ui_rollerAge;
+extern lv_obj_t * ui_Dropdown2;
 extern lv_obj_t * ui_Label2;
 extern lv_obj_t * ui_containerResultIMC;
 extern lv_obj_t * ui_labelHeader;
 extern lv_obj_t * ui_labelResultIMC;
 extern lv_obj_t * ui_labelDescriptionIMC;
-void ui_event_Button1(lv_event_t * e);
-extern lv_obj_t * ui_Button1;
 extern lv_obj_t * ui_Image1;
+extern lv_obj_t * ui_containerHeight;
+extern lv_obj_t * ui_imgHeight;
+extern lv_obj_t * ui_labelHeight;
 extern lv_obj_t * ui_labelTypeUnits;
-// CUSTOM VARIABLES
-
-// SCREEN: ui_settingScreen
-static void call_event_Button2(lv_event_t * e);
-void ui_settingScreen_screen_init(void);
-static void show_message_box(lv_event_t * e);
-extern lv_obj_t * ui_Spinner1;
-extern lv_obj_t * message_box;
-extern lv_obj_t * list_SSID;
-extern lv_obj_t * ui_settingScreen;
-extern lv_obj_t * ui_Keyboard1;
-void ui_event_textareaPasswordWifi(lv_event_t * e);
-extern lv_obj_t * ui_textareaPasswordWifi;
-void ui_event_Button2(lv_event_t * e);
-extern lv_obj_t * ui_Button2;
+extern lv_obj_t * ui_containerWeight;
+extern lv_obj_t * ui_labelWeight;
+extern lv_obj_t * ui_imgWeight;
+extern lv_obj_t * ui_Container2;
+extern lv_obj_t * ui_Button3;
 extern lv_obj_t * ui_Image3;
 // CUSTOM VARIABLES
 
@@ -75,15 +58,12 @@ extern lv_obj_t * ui_Image3;
 extern lv_obj_t * ui____initial_actions0;
 
 // IMAGES AND IMAGE SETS
-LV_IMG_DECLARE(ui_img_check_png);    // assets/logo_will.png
-LV_IMG_DECLARE(ui_img_lock_png);    // assets/logo_will.png
 LV_IMG_DECLARE(ui_img_logo_will_png);    // assets/logo_will.png
-LV_IMG_DECLARE(ui_img_home_png);    // assets/home.png
 LV_IMG_DECLARE(ui_img_unavailable_wifi_png);    // assets/unavailable_wifi.png
-LV_IMG_DECLARE(ui_img_696145193);    // assets/mdi--weight-kilogram 1.png
+LV_IMG_DECLARE(ui_img_available_wifi_png);    // assets/available_wifi.png
 LV_IMG_DECLARE(ui_img_1311752867);    // assets/mdi--human-male-height 1.png
-LV_IMG_DECLARE(ui_img_cogico_png);    // assets/cogIco.png
-LV_IMG_DECLARE(ui_img_image_back_png);    // assets/image_back.png
+LV_IMG_DECLARE(ui_img_696145193);    // assets/mdi--weight-kilogram 1.png
+LV_IMG_DECLARE(ui_img_save_png);    // assets/save.png
 
 // UI INIT
 void ui_init(void);

@@ -12,57 +12,38 @@
 // SCREEN: ui_splashScreen
 void ui_splashScreen_screen_init(void);
 void ui_event_splashScreen(lv_event_t * e);
-lv_obj_t * ui_SpinnerSplash;
 lv_obj_t * ui_splashScreen;
 lv_obj_t * ui_Image2;
+lv_obj_t * ui_spinnerSplash;
+lv_obj_t * ui_derechosDeAutorLabel;
 // CUSTOM VARIABLES
 
 
 // SCREEN: ui_homeScreen
 void ui_homeScreen_screen_init(void);
-
 lv_obj_t * ui_homeScreen;
-lv_obj_t * ui_homeImg;
-lv_obj_t * ui_homeLabel;
 lv_obj_t * ui_internetUnavailableImg;
 lv_obj_t * ui_stateChargeBateryBar;
-void ui_event_buttonWeight(lv_event_t * e);
-lv_obj_t * ui_buttonWeight;
-lv_obj_t * ui_imgWeight;
-lv_obj_t * ui_labelWeight;
-void ui_event_buttonHeight(lv_event_t * e);
-lv_obj_t * ui_buttonHeight;
-lv_obj_t * ui_imgHeight;
-lv_obj_t * ui_labelHeight;
 lv_obj_t * ui_containerdkdkdd;
-lv_obj_t * ui_Roller1;
+lv_obj_t * ui_Dropdown3;
 lv_obj_t * ui_Label1;
 lv_obj_t * ui_containerRollerAge;
-lv_obj_t * ui_rollerAge;
+lv_obj_t * ui_Dropdown2;
 lv_obj_t * ui_Label2;
 lv_obj_t * ui_containerResultIMC;
 lv_obj_t * ui_labelHeader;
 lv_obj_t * ui_labelResultIMC;
 lv_obj_t * ui_labelDescriptionIMC;
-void ui_event_Button1(lv_event_t * e);
-lv_obj_t * ui_Button1;
 lv_obj_t * ui_Image1;
+lv_obj_t * ui_containerHeight;
+lv_obj_t * ui_imgHeight;
+lv_obj_t * ui_labelHeight;
 lv_obj_t * ui_labelTypeUnits;
-// CUSTOM VARIABLES
-
-
-// SCREEN: ui_settingScreen
-void ui_settingScreen_screen_init(void);
-void show_message_box(lv_event_t * e);
-lv_obj_t * ui_Spinner1;
-lv_obj_t * message_box;
-lv_obj_t * list_SSID;
-lv_obj_t * ui_settingScreen;
-lv_obj_t * ui_Keyboard1;
-void ui_event_textareaPasswordWifi(lv_event_t * e);
-lv_obj_t * ui_textareaPasswordWifi;
-void ui_event_Button2(lv_event_t * e);
-lv_obj_t * ui_Button2;
+lv_obj_t * ui_containerWeight;
+lv_obj_t * ui_labelWeight;
+lv_obj_t * ui_imgWeight;
+lv_obj_t * ui_Container2;
+lv_obj_t * ui_Button3;
 lv_obj_t * ui_Image3;
 // CUSTOM VARIABLES
 
@@ -86,59 +67,8 @@ void ui_event_splashScreen(lv_event_t * e)
     lv_event_code_t event_code = lv_event_get_code(e);
 
     if(event_code == LV_EVENT_SCREEN_LOADED) {
-        _ui_screen_change(&ui_homeScreen, LV_SCR_LOAD_ANIM_OVER_TOP, 100, 1000, &ui_homeScreen_screen_init);
+        _ui_screen_change(&ui_homeScreen, LV_SCR_LOAD_ANIM_OVER_BOTTOM, 500, 1000, &ui_homeScreen_screen_init);
         _ui_screen_delete(&ui_splashScreen);
-
-    }
-}
-
-void ui_event_buttonWeight(lv_event_t * e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-
-    if(event_code == LV_EVENT_RELEASED) {
-        mainWeightButton(e);
-    }
-}
-
-void ui_event_buttonHeight(lv_event_t * e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-
-    if(event_code == LV_EVENT_RELEASED) {
-        mainHeightButton(e);
-    }
-}
-
-void ui_event_Button1(lv_event_t * e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-
-    if(event_code == LV_EVENT_RELEASED) {
-        _ui_screen_change(&ui_settingScreen, LV_SCR_LOAD_ANIM_MOVE_LEFT, 100, 0, &ui_settingScreen_screen_init);
-        _ui_screen_delete(&ui_homeScreen);
-    }
-}
-
-void ui_event_textareaPasswordWifi(lv_event_t * e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-
-    if(event_code == LV_EVENT_FOCUSED) {
-        _ui_flag_modify(ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_REMOVE);
-    }
-    if(event_code == LV_EVENT_DEFOCUSED) {
-        _ui_flag_modify(ui_Keyboard1, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_ADD);
-    }
-}
-
-void ui_event_Button2(lv_event_t * e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-
-    if(event_code == LV_EVENT_RELEASED) {
-        _ui_screen_change(&ui_homeScreen, LV_SCR_LOAD_ANIM_MOVE_LEFT, 100, 0, &ui_homeScreen_screen_init);
-        _ui_screen_delete(&ui_settingScreen);
     }
 }
 
@@ -152,7 +82,6 @@ void ui_init(void)
     lv_disp_set_theme(dispp, theme);
     ui_splashScreen_screen_init();
     ui_homeScreen_screen_init();
-    ui_settingScreen_screen_init();
     ui____initial_actions0 = lv_obj_create(NULL);
     lv_disp_load_scr(ui_splashScreen);
 }

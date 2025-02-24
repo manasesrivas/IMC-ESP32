@@ -51,6 +51,9 @@ HX711 bascula;
 
 
 void setup() {
+
+
+
     Serial.begin(115200);
 
     bascula.begin(pinData, pinClk);
@@ -63,7 +66,7 @@ void setup() {
     Serial.println(zero_factor);
     
     
-    tft.begin();
+    tft.begin(); 
     tft.setTouch(calData);
     
     
@@ -80,6 +83,7 @@ void setup() {
     lv_indev_set_read_cb(indev, my_touchpad_read);
 
     ui_init();
+
 }
 
 void loop()

@@ -25,11 +25,8 @@ Un microcontrolardor ESP32 DEVKIT V1 para manejar los datos.
 # diseño de las pantallas
 Diseño de la UI de la pantalla. Esta creada con la herramienta square line studio utilizando la libreria LVGL. hay pequeñas modificaciones de la UI en el codigo de modo de prueba como es la implementacion de la ``` message box ``` y en el widget estatico donde esta para elegir la red WI-FI a conectar, En la pantalla de configuracion de WI-Fi.
 
-<img src="./assets/splashScreen.JPG" height="500"/>
-<img src="./assets/homeScreen.JPG" height="500"/>
-<img src="./assets/settingsScreen.JPG" height="500"/>
-<img src="./assets/wifiSettingScreen.JPG" height="500"/>
-<img src="./assets/passwordwifiScreen.JPG.JPG" height="500"/>
+<img src="./assets/IMG_9085.JPG.JPG" height="500"/>
+<img src="./assets/IMG_9086.JPG.JPG.JPG" height="500"/>
 
 
 # mejoras

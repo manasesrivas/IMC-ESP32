@@ -10,10 +10,6 @@
 extern "C" {
 #endif
 
-void mainWeightButton(lv_event_t * e);
-void mainHeightButton(lv_event_t * e);
-void signupWIFI(lv_event_t * e);
-
 #ifdef __cplusplus
 } /*extern "C"*/
 #endif

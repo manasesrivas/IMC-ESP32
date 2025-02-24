@@ -10,3 +10,7 @@ def mainWeightButton(event_struct):
 def mainHeightButton(event_struct):
     return
 
+
+def signupWIFI(event_struct):
+    return
+

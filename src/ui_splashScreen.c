@@ -22,17 +22,24 @@ void ui_splashScreen_screen_init(void)
     lv_obj_add_flag(ui_Image2, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
     lv_obj_remove_flag(ui_Image2, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
-    
-    ui_SpinnerSplash = lv_spinner_create(ui_splashScreen);
-    lv_obj_set_width(ui_SpinnerSplash, 80);
-    lv_obj_set_height(ui_SpinnerSplash, 80);
-    lv_obj_set_x(ui_SpinnerSplash, -18);
-    lv_obj_set_y(ui_SpinnerSplash, 152);
-    lv_obj_set_align(ui_SpinnerSplash, LV_ALIGN_CENTER);
-    lv_obj_remove_flag(ui_SpinnerSplash, LV_OBJ_FLAG_CLICKABLE);      /// Flags
+    ui_spinnerSplash = lv_spinner_create(ui_splashScreen);
+    //lv_spinner_set_anim_params(ui_spinnerSplash, 1000, 90);
+    lv_obj_set_width(ui_spinnerSplash, 80);
+    lv_obj_set_height(ui_spinnerSplash, 80);
+    lv_obj_set_align(ui_spinnerSplash, LV_ALIGN_CENTER);
+    lv_obj_remove_flag(ui_spinnerSplash, LV_OBJ_FLAG_CLICKABLE);      /// Flags
 
-    lv_obj_set_style_arc_color(ui_SpinnerSplash, lv_color_hex(0x00DA00), LV_PART_INDICATOR | LV_STATE_DEFAULT);
-    lv_obj_set_style_arc_opa(ui_SpinnerSplash, 255, LV_PART_INDICATOR | LV_STATE_DEFAULT);
+    lv_obj_set_style_arc_color(ui_spinnerSplash, lv_color_hex(0x00DA00), LV_PART_INDICATOR | LV_STATE_DEFAULT);
+    lv_obj_set_style_arc_opa(ui_spinnerSplash, 255, LV_PART_INDICATOR | LV_STATE_DEFAULT);
+
+    ui_derechosDeAutorLabel = lv_label_create(ui_splashScreen);
+    lv_obj_set_width(ui_derechosDeAutorLabel, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_derechosDeAutorLabel, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_derechosDeAutorLabel, 21);
+    lv_obj_set_y(ui_derechosDeAutorLabel, -227);
+    lv_obj_set_align(ui_derechosDeAutorLabel, LV_ALIGN_CENTER);
+    lv_label_set_text(ui_derechosDeAutorLabel, "creado por Manases Rivas 3DSA 2024");
+    lv_obj_add_flag(ui_derechosDeAutorLabel, LV_OBJ_FLAG_FLOATING);     /// Flags
 
     lv_obj_add_event_cb(ui_splashScreen, ui_event_splashScreen, LV_EVENT_ALL, NULL);
 
