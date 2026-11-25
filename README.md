@@ -39,3 +39,6 @@ Diseño de la UI de la pantalla. Esta creada con la herramienta square line stud
 
 # problemas
 - no se puede agregar modulo wifi, por falta de memoria DRAM
+
+# pasos hechos
+en este proyecto se obto por utilizar el sdkconfig

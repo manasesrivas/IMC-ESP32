@@ -1,6 +1,9 @@
-file(GLOB_RECURSE PROJECT_RESOURCE "*.c")
-
-idf_component_register(SRCS ${PROJECT_RESOURCE}
-                    INCLUDE_DIRS "." "ui"
-                    REQUIRES nvs_flash esp_wifi
-                    )
+idf_component_register(
+    SRCS "main.c" "display_config.c"
+    INCLUDE_DIRS "."
+    REQUIRES
+    #     ui_lvgl
+        esp_driver_gpio
+        esp_lcd
+        freertos
+)
