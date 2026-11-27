@@ -1,9 +1,9 @@
 idf_component_register(
-    SRCS "main.c" "display_config.c"
-    INCLUDE_DIRS "."
+    
+    SRCS "main.c"
+    INCLUDE_DIRS "." 
     REQUIRES
-    #     ui_lvgl
-        esp_driver_gpio
-        esp_lcd
+        display_config
+        ui_lvgl
         freertos
 )

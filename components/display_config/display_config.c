@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "display_config.h"
 
 #include "esp_timer.h"

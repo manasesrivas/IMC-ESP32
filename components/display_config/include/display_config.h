@@ -8,21 +8,21 @@
 /* El ST7796 es nativamente 320x480 (vertical). Con MADCTL = 0x28
  * queda en horizontal 480x320. Si cambiás la orientación, cambiá
  * TFT_WIDTH/TFT_HEIGHT y TFT_MADCTL juntos. */
-#define TFT_WIDTH        480
-#define TFT_HEIGHT       320
+#define TFT_WIDTH        320
+#define TFT_HEIGHT       480
 
 /* Registro MADCTL (0x36). Valores habituales para ST7796:
  *   0x48 vertical, 0x28 horizontal, 0x88 vertical invertido,
  *   0xE8 horizontal invertido.
  * Si la imagen sale espejada o con rojo/azul cambiados, ajustá acá. */
-#define TFT_MADCTL       0x28
+#define TFT_MADCTL       0x48
 
 /* Algunos módulos necesitan inversión de color para verse bien. */
 #define TFT_INVERT_COLORS  0
 
 /* ------------------------- Buffer de LVGL ------------------------- */
-/* 10 líneas en RGB565 (2 bytes por píxel). */
-#define DRAW_BUF_LINES   10
+/* 40 líneas en RGB565 (2 bytes por píxel). */
+#define DRAW_BUF_LINES   60
 #define DRAW_BUF_SIZE    (TFT_WIDTH * DRAW_BUF_LINES * sizeof(uint16_t))
 
 /* ------------------------- Pines LCD (bus paralelo 8 bits) ------------------------- */
