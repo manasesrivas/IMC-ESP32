@@ -1,6 +1,6 @@
 file(
     GLOB UI_SRCS
-    "images/*.c"
+    # "images/*.c"
     "*.c"
 )
 
